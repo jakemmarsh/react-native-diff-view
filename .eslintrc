@@ -1,0 +1,134 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react-hooks",
+    "no-only-tests"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "prettier/react"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "@typescript-eslint/camelcase": [
+      2,
+      {
+        "properties": "always"
+      }
+    ],
+    "@typescript-eslint/explicit-function-return-type": [
+      2,
+      {
+        "allowExpressions": true
+      }
+    ],
+    "@typescript-eslint/interface-name-prefix": [
+      2,
+      "always"
+    ],
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-object-literal-type-assertion": 0,
+    "@typescript-eslint/no-unused-vars": [
+      2,
+      {
+        "argsIgnorePattern": "^_",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "@typescript-eslint/no-use-before-define": [
+      2,
+      {
+        "functions": false
+      }
+    ],
+    "@typescript-eslint/no-var-requires": 0,
+    "indent": 0,
+    "no-console": 2,
+    "no-empty": [
+      2,
+      {
+        "allowEmptyCatch": true
+      }
+    ],
+    "no-unused-vars": 0,
+    "no-shadow": 0,
+    "object-shorthand": 2,
+    "padding-line-between-statements": [
+      2,
+      {
+        "blankLine": "always",
+        "prev": [
+          "const",
+          "let"
+        ],
+        "next": "*"
+      },
+      {
+        "blankLine": "any",
+        "prev": [
+          "const",
+          "let"
+        ],
+        "next": [
+          "const",
+          "let"
+        ]
+      },
+      {
+        "blankLine": "always",
+        "prev": [
+          "block",
+          "block-like"
+        ],
+        "next": "*"
+      }
+    ],
+    "react/display-name": 0,
+    "react/jsx-boolean-value": [
+      2,
+      "always"
+    ],
+    "react/no-unescaped-entities": 0,
+    "react/prop-types": 0,
+    "react-hooks/rules-of-hooks": 2,
+    "react/no-this-in-sfc": 2,
+    "quotes": [
+      2,
+      "single",
+      {
+        "allowTemplateLiterals": true,
+        "avoidEscape": true
+      }
+    ],
+    "no-only-tests/no-only-tests": 2
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*test.*"
+      ],
+      "rules": {
+        "@typescript-eslint/camelcase": 0
+      }
+    }
+  ]
+}

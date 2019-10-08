@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/hunk CodeCell renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "paddingHorizontal": 6,
+      "paddingVertical": 3,
+    }
+  }
+>
+  <Text
+    numberOfLines={1}
+    style={
+      Object {
+        "fontFamily": "Courier New",
+        "fontSize": 12,
+      }
+    }
+  >
+    A
+  </Text>
+</View>
+`;

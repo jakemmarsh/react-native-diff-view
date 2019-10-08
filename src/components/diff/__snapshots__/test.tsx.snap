@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/diff base renders correctly 1`] = `
+<View
+  style={Object {}}
+>
+  <View>
+    <View />
+    <View />
+    <View />
+    <View />
+  </View>
+  <div>
+    [{"content":"@@ -21,3 +21,3 @@ describe('basic test', () =&gt; {","oldStart":21,"newStart":21,"oldLines":3,"newLines":3,"changes":[{"content":"    it('App renders correctly', () =&gt; {","type":"normal","isNormal":true,"oldLineNumber":21,"newLineNumber":21},{"content":"        expect(renderer.create(&lt;App diffText={'deff'} /&gt;).toJSON()).toMatchSnapshot();","type":"delete","isDelete":true,"lineNumber":22},{"content":"        expect(renderer.create(&lt;App diffText={'diff'} /&gt;).toJSON()).toMatchSnapshot();","type":"insert","isInsert":true,"lineNumber":22},{"content":"    });","type":"normal","isNormal":true,"oldLineNumber":23,"newLineNumber":23}],"isPlain":false}]
+  </div>
+</View>
+`;
+
+exports[`components/diff base unified Diff 1`] = `
+<View
+  style={Object {}}
+>
+  <View>
+    <View />
+    <View />
+    <View />
+  </View>
+  <div>
+    [{"content":"@@ -21,3 +21,3 @@ describe('basic test', () =&gt; {","oldStart":21,"newStart":21,"oldLines":3,"newLines":3,"changes":[{"content":"    it('App renders correctly', () =&gt; {","type":"normal","isNormal":true,"oldLineNumber":21,"newLineNumber":21},{"content":"        expect(renderer.create(&lt;App diffText={'deff'} /&gt;).toJSON()).toMatchSnapshot();","type":"delete","isDelete":true,"lineNumber":22},{"content":"        expect(renderer.create(&lt;App diffText={'diff'} /&gt;).toJSON()).toMatchSnapshot();","type":"insert","isInsert":true,"lineNumber":22},{"content":"    });","type":"normal","isNormal":true,"oldLineNumber":23,"newLineNumber":23}],"isPlain":false}]
+  </div>
+</View>
+`;
+
+exports[`components/diff w/ Decoration renders correctly 1`] = `
+<View
+  style={Object {}}
+>
+  <View>
+    <View />
+    <View />
+    <View />
+    <View />
+  </View>
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "flex": 1,
+        "flexDirection": "row",
+        "lineHeight": 1.5,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "flex": 1,
+        }
+      }
+    >
+      <div>
+        xxx
+      </div>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/diff w/ Decoration unified Diff with Decoration 1`] = `
+<View
+  style={Object {}}
+>
+  <View>
+    <View />
+    <View />
+    <View />
+  </View>
+  <View
+    style={
+      Object {
+        "alignSelf": "stretch",
+        "flex": 1,
+        "flexDirection": "row",
+        "lineHeight": 1.5,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "flex": 1,
+        }
+      }
+    >
+      <div>
+        xxx
+      </div>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`components/diff w/ Widget split widget 1`] = `
+<View
+  style={Object {}}
+>
+  <View>
+    <View />
+    <View />
+    <View />
+    <View />
+  </View>
+  <div>
+    [{"content":"@@ -21,3 +21,3 @@ describe('basic test', () =&gt; {","oldStart":21,"newStart":21,"oldLines":3,"newLines":3,"changes":[{"content":"    it('App renders correctly', () =&gt; {","type":"normal","isNormal":true,"oldLineNumber":21,"newLineNumber":21},{"content":"        expect(renderer.create(&lt;App diffText={'deff'} /&gt;).toJSON()).toMatchSnapshot();","type":"delete","isDelete":true,"lineNumber":22},{"content":"        expect(renderer.create(&lt;App diffText={'diff'} /&gt;).toJSON()).toMatchSnapshot();","type":"insert","isInsert":true,"lineNumber":22},{"content":"    });","type":"normal","isNormal":true,"oldLineNumber":23,"newLineNumber":23}],"isPlain":false}]
+  </div>
+</View>
+`;
+
+exports[`components/diff w/ Widget unified widget 1`] = `
+<View
+  style={Object {}}
+>
+  <View>
+    <View />
+    <View />
+    <View />
+  </View>
+  <div>
+    [{"content":"@@ -21,3 +21,3 @@ describe('basic test', () =&gt; {","oldStart":21,"newStart":21,"oldLines":3,"newLines":3,"changes":[{"content":"    it('App renders correctly', () =&gt; {","type":"normal","isNormal":true,"oldLineNumber":21,"newLineNumber":21},{"content":"        expect(renderer.create(&lt;App diffText={'deff'} /&gt;).toJSON()).toMatchSnapshot();","type":"delete","isDelete":true,"lineNumber":22},{"content":"        expect(renderer.create(&lt;App diffText={'diff'} /&gt;).toJSON()).toMatchSnapshot();","type":"insert","isInsert":true,"lineNumber":22},{"content":"    });","type":"normal","isNormal":true,"oldLineNumber":23,"newLineNumber":23}],"isPlain":false}]
+  </div>
+</View>
+`;

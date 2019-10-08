@@ -1,0 +1,66 @@
+{
+  "name": "react-native-diff-view",
+  "version": "1.0.0",
+  "description": "A react-native module for parsing and displaying git diffs.",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "NODE_ENV=test tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}' --cache",
+    "pretest": "npm run lint",
+    "test": "NODE_ENV=test TZ=America/Los_Angeles jest --config jest.config.js",
+    "clean": "rm -Rf dist/*",
+    "prebuild": "npm run clean",
+    "build": "NODE_ENV=production tsc",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monolist/react-native-diff-view.git"
+  },
+  "keywords": [
+    "react-native",
+    "git",
+    "diff",
+    "view",
+    "react",
+    "native"
+  ],
+  "author": "jake@monolist.co",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/monolist/react-native-diff-view/issues"
+  },
+  "homepage": "https://github.com/monolist/react-native-diff-view#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "deep-equal": "^1.1.0",
+    "diff-match-patch": "^1.0.4",
+    "gitdiff-parser": "^0.1.2",
+    "react": "^16.10.2",
+    "react-native": "^0.61.2",
+    "refractor": "^2.10.0"
+  },
+  "devDependencies": {
+    "@types/deep-equal": "^1.0.1",
+    "@types/diff-match-patch": "^1.0.32",
+    "@types/jest": "^24.0.18",
+    "@types/react": "^16.9.5",
+    "@types/react-native": "^0.60.19",
+    "@types/react-test-renderer": "^16.9.0",
+    "@types/refractor": "^2.8.0",
+    "@typescript-eslint/eslint-plugin": "^2.3.3",
+    "@typescript-eslint/parser": "^2.3.3",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-no-only-tests": "^2.3.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.1.2",
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.56.0",
+    "react-test-renderer": "^16.10.2",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.3"
+  }
+}
