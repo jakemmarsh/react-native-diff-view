@@ -36,7 +36,7 @@ const markInPaths = (word: string, name: string, replacement: string): MarkInPat
   }, []);
 };
 
-export default (word?: string, name?: string, replacement = word): (lines: INode[][][][]) => INode[][][] => {
+export default (word?: string, name?: string, replacement = word): ((lines: INode[][][][]) => INode[][][]) => {
   const mark = markInPaths(word, name, replacement);
 
   return ([oldLinesOfPaths, newLinesOfPaths]: INode[][][][]) => {

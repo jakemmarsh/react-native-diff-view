@@ -19,7 +19,7 @@ const useBoundCallbacks = (callbacks: Events, arg: any, hoverOn: () => any, hove
     output.onMouseLeave = composeCallback(hoverOff, output.onMouseLeave);
 
     return output;
-  }, [callbacks, arg]);
+  }, [callbacks, arg, hoverOn, hoverOff]);
 
 const useBoolean = (): [boolean, () => void, () => void] => {
   const [value, setValue] = useState(false);

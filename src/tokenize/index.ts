@@ -16,7 +16,7 @@ function flow(funcs: any[]): any {
   let index = length;
 
   while (index--) {
-    if (typeof funcs[index] != 'function') {
+    if (typeof funcs[index] !== 'function') {
       throw new TypeError('Expected a function');
     }
   }

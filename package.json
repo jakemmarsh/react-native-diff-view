@@ -10,7 +10,7 @@
     "clean": "rm -Rf dist/*",
     "prebuild": "npm run clean",
     "build": "NODE_ENV=production tsc",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -42,6 +42,7 @@
     "refractor": "^2.10.0"
   },
   "devDependencies": {
+    "@react-native-community/eslint-config": "0.0.5",
     "@types/deep-equal": "^1.0.1",
     "@types/diff-match-patch": "^1.0.32",
     "@types/jest": "^24.0.18",
@@ -53,13 +54,14 @@
     "@typescript-eslint/parser": "^2.3.3",
     "babel-plugin-module-resolver": "^3.2.0",
     "eslint": "^6.5.1",
-    "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-no-only-tests": "^2.3.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.1.2",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.56.0",
+    "prettier": "^1.18.2",
     "react-test-renderer": "^16.10.2",
+    "shared-git-hooks": "^1.2.1",
     "ts-jest": "^24.1.0",
     "typescript": "^3.6.3"
   }

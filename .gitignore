@@ -45,6 +45,8 @@ typings/
 # Optional eslint cache
 .eslintcache
 
+.jest
+
 # Optional REPL history
 .node_repl_history
 
@@ -56,6 +58,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
-# next.js build output
-.next

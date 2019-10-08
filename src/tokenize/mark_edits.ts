@@ -170,7 +170,7 @@ const diffByLine = (changes: IChange[]): { oldEdits: IEdit[]; newEdits: IEdit[];
   );
 };
 
-export default (hunks: IHunk[], { type = 'block' } = {}): (nodes: INode[][][]) => INode[][][] => {
+export default (hunks: IHunk[], { type = 'block' } = {}): ((nodes: INode[][][]) => INode[][][]) => {
   const findEdits = type === 'block' ? diffChangeBlock : diffByLine;
   const changeBlocks = hunks.reduce((acc, hunk) => {
     acc.push(...findChangeBlocks(hunk.changes));

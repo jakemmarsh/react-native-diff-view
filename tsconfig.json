@@ -5,7 +5,7 @@
     "esModuleInterop": true,
     "inlineSourceMap": false,
     "inlineSources": false,
-    "jsx": "react",
+    "jsx": "react-native",
     "lib": ["dom", "es2015", "es2016", "es2017"],
     "module": "commonjs",
     "moduleResolution": "node",
@@ -23,6 +23,6 @@
       "types"
     ]
   },
-  "include": ["./*.d.ts", "src/**/*"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }
