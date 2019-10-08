@@ -1,4 +1,5 @@
 import { TextStyle, ViewStyle } from 'react-native';
+import { IHunkProps } from './components/hunk';
 
 export interface IChange {
   content?: string;
@@ -44,7 +45,7 @@ export type Widgets = Record<string, JSX.Element>;
 
 export type Events = Record<string, (arg: any) => any>;
 
-export type DiffChildren = (hunks: IHunk[]) => JSX.Element | JSX.Element[];
+export type DiffChildren = (hunks: IHunk[], hunkProps?: Partial<IHunkProps>) => JSX.Element | JSX.Element[];
 
 export interface IGutterOptions {
   change: IChange;

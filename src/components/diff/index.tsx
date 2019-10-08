@@ -10,6 +10,9 @@ interface IDiffProps {
   hunks: IHunk[];
   gutterType?: GutterType;
   style?: ViewStyle;
+  lineStyle?: ViewStyle;
+  gutterStyle?: ViewStyle;
+  contentStyle?: ViewStyle;
   selectedChanges?: string[];
   widgets?: Widgets;
   optimizeSelection?: boolean;
@@ -21,7 +24,17 @@ interface IDiffProps {
 
 const Diff: React.FunctionComponent<IDiffProps> = React.memo(
   (props): JSX.Element => {
-    const { diffType, children, style, optimizeSelection, hunks, ...remainings } = props;
+    const {
+      diffType,
+      children,
+      style,
+      lineStyle,
+      gutterStyle,
+      contentStyle,
+      optimizeSelection,
+      hunks,
+      ...remainings
+    } = props;
     const hideGutter = remainings.gutterType === 'none';
     const monotonous = diffType === 'add' || diffType === 'delete';
     const cols = (() => {
@@ -38,7 +51,7 @@ const Diff: React.FunctionComponent<IDiffProps> = React.memo(
       <Provider value={{ ...remainings, monotonous } as IDiffSettings}>
         <View style={style}>
           {cols}
-          {children(hunks)}
+          {children(hunks, { lineStyle, gutterStyle, contentStyle })}
         </View>
       </Provider>
     );
@@ -55,10 +68,10 @@ Diff.defaultProps = {
   renderGutter({ textStyle, renderDefault }) {
     return renderDefault(textStyle);
   },
-  children(hunks) {
+  children(hunks, hunkProps = {}) {
     const key = (hunk: IHunk): string => `-${hunk.oldStart},${hunk.oldLines} +${hunk.newStart},${hunk.newLines}`;
 
-    return hunks.map((hunk) => <Hunk key={key(hunk)} hunk={hunk} />);
+    return hunks.map((hunk) => <Hunk key={key(hunk)} {...hunkProps} hunk={hunk} />);
   },
 };
 
