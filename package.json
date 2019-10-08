@@ -1,6 +1,6 @@
 {
   "name": "react-native-diff-view",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A react-native module for parsing and displaying git diffs.",
   "main": "dist/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "test": "NODE_ENV=test TZ=America/Los_Angeles jest --config jest.config.js",
     "clean": "rm -Rf dist/*",
     "prebuild": "npm run clean",
-    "build": "NODE_ENV=production tsc",
+    "build": "NODE_ENV=production tsc -p tsconfig.json",
     "prepublishOnly": "npm run build"
   },
   "repository": {

@@ -7,7 +7,7 @@ module.exports = {
   globals: {
     'ts-jest': {
       babelConfig: true,
-      tsConfig: 'tsconfig.test.json',
+      tsConfig: 'tsconfig.json',
       diagnostics: {
         warnOnly: true,
       },
@@ -24,8 +24,6 @@ module.exports = {
     ...tsjPreset.transform,
     '^.+\\.js$': '<rootDir>/node_modules/react-native/jest/preprocessor.js',
   },
-  transformIgnorePatterns: [
-    'node_modules/(?!(jest-)?react-native)',
-  ],
+  transformIgnorePatterns: ['node_modules/(?!(jest-)?react-native)'],
   verbose: false,
 };

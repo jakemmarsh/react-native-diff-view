@@ -5,7 +5,7 @@
     "esModuleInterop": true,
     "inlineSourceMap": false,
     "inlineSources": false,
-    "jsx": "react-native",
+    "jsx": "react",
     "lib": ["dom", "es2015", "es2016", "es2017"],
     "module": "commonjs",
     "moduleResolution": "node",
