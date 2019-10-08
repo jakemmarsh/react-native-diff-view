@@ -1,4 +1,4 @@
-# react-native-diff-view [![Build Status](https://travis-ci.org/Monolist/react-native-diff-view.svg?branch=master)](https://travis-ci.org/Monolist/react-native-diff-view) ![David](https://img.shields.io/david/monolist/react-native-diff-view)
+# react-native-diff-view [![Build Status](https://travis-ci.org/monolist/react-native-diff-view.svg?branch=master)](https://travis-ci.org/monolist/react-native-diff-view) ![David](https://img.shields.io/david/monolist/react-native-diff-view)
 
 A React Native module for parsing and displaying git diffs. This library was heavily inspired by, and borrows code from, [react-diff-view](https://github.com/otakustay/react-diff-view).
 
@@ -145,7 +145,7 @@ This library is used and primarily maintained by [Monolist](https://monolist.co)
 
 To get started:
 
-1. `git clone https://github.com/Monolist/react-native-diff-view.git`
+1. `git clone https://github.com/monolist/react-native-diff-view.git`
 2. `cd react-native-diff-view`
 3. `npm install`
 
