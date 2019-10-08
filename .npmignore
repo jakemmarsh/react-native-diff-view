@@ -3,4 +3,5 @@ tsconfig.test.json
 
 test.*
 
+hooks/
 src/
