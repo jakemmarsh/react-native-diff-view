@@ -1,8 +1,7 @@
 import { createContext, useContext } from 'react';
-import { ViewType, GutterType } from '../types';
+import { GutterType } from '../types';
 
 export interface IDiffSettings {
-  viewType: ViewType;
   gutterType: GutterType;
   monotonous: boolean;
 }

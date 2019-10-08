@@ -3,7 +3,6 @@ import { ViewStyle } from 'react-native';
 import { IHunk, IChange, Widgets, Events } from '../../types';
 import { useDiffSettings } from '../../context';
 import UnifiedHunk from './unified_hunk';
-import SplitHunk from './split_hunk';
 
 export interface IHunkProps {
   hunk: IHunk;
@@ -21,9 +20,8 @@ const Hunk: React.FunctionComponent<IHunkProps> = React.memo(
   ({ hunk, style, ...props }): JSX.Element => {
     const { gutterType, ...context } = useDiffSettings();
     const hideGutter = gutterType === 'none';
-    const RenderingHunk = context.viewType === 'unified' ? UnifiedHunk : SplitHunk;
 
-    return <RenderingHunk {...context} {...props} hunk={hunk} hideGutter={hideGutter} style={style} />;
+    return <UnifiedHunk {...context} {...props} hunk={hunk} hideGutter={hideGutter} style={style} />;
   },
 );
 

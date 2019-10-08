@@ -38,8 +38,6 @@ export type DiffType = 'add' | 'delete' | 'modify' | 'rename' | 'copy';
 
 export type Side = 'old' | 'new';
 
-export type ViewType = 'unified' | 'split';
-
 export type GutterType = 'default' | 'none' | 'anchor';
 
 export type Widgets = Record<string, JSX.Element>;

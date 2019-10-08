@@ -5,14 +5,8 @@ import { basicHunk } from '../../fixtures';
 import { Decoration, getChangeKey } from '../..';
 import Diff from '.';
 
-const DiffSplit = ({ children }: { children: DiffChildren }): JSX.Element => (
-  <Diff diffType={'modify'} hunks={[basicHunk]} viewType={'split'}>
-    {children}
-  </Diff>
-);
-
-const DiffUnified = ({ children }: { children: DiffChildren }): JSX.Element => (
-  <Diff diffType={'modify'} hunks={[basicHunk]} viewType={'unified'}>
+const TestDiff = ({ children }: { children: DiffChildren }): JSX.Element => (
+  <Diff diffType={'modify'} hunks={[basicHunk]}>
     {children}
   </Diff>
 );
@@ -21,12 +15,8 @@ describe('components/diff', () => {
   const renderRawHunks = (hunks: IHunk[]): JSX.Element => <div>{JSON.stringify(hunks)}</div>;
 
   describe('base', () => {
-    test('renders correctly', () => {
-      expect(renderer.create(<DiffSplit>{renderRawHunks}</DiffSplit>).toJSON()).toMatchSnapshot();
-    });
-
-    test('unified Diff', () => {
-      expect(renderer.create(<DiffUnified>{renderRawHunks}</DiffUnified>).toJSON()).toMatchSnapshot();
+    it('renders correctly', () => {
+      expect(renderer.create(<TestDiff>{renderRawHunks}</TestDiff>).toJSON()).toMatchSnapshot();
     });
   });
 
@@ -37,12 +27,8 @@ describe('components/diff', () => {
       </Decoration>
     );
 
-    test('renders correctly', () => {
-      expect(renderer.create(<DiffSplit>{renderDecoration}</DiffSplit>).toJSON()).toMatchSnapshot();
-    });
-
-    test('unified Diff with Decoration', () => {
-      expect(renderer.create(<DiffUnified>{renderDecoration}</DiffUnified>).toJSON()).toMatchSnapshot();
+    it('renders correctly', () => {
+      expect(renderer.create(<TestDiff>{renderDecoration}</TestDiff>).toJSON()).toMatchSnapshot();
     });
   });
 
@@ -61,27 +47,13 @@ describe('components/diff', () => {
       }, {});
     };
 
-    test('split widget', () => {
+    it('renders correctly', () => {
       const hunks = [basicHunk];
 
       expect(
         renderer
           .create(
-            <Diff hunks={hunks} widgets={getWidgets(hunks)} diffType="modify" viewType="split">
-              {renderRawHunks}
-            </Diff>,
-          )
-          .toJSON(),
-      ).toMatchSnapshot();
-    });
-
-    test('unified widget', () => {
-      const hunks = [basicHunk];
-
-      expect(
-        renderer
-          .create(
-            <Diff hunks={hunks} widgets={getWidgets(hunks)} diffType="modify" viewType="unified">
+            <Diff hunks={hunks} widgets={getWidgets(hunks)} diffType="modify">
               {renderRawHunks}
             </Diff>,
           )

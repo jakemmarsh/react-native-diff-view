@@ -1,7 +1,6 @@
 import React from 'react';
 import { ViewStyle } from 'react-native';
 import { useDiffSettings } from '../../context';
-import SplitDecoration from './split_decoration';
 import UnifiedDecoration from './unified_decoration';
 
 export interface IDecorationProps {
@@ -15,10 +14,9 @@ export interface IDecorationProps {
 
 export const Decoration: React.FunctionComponent<IDecorationProps> = React.memo(
   (props): JSX.Element => {
-    const { viewType, gutterType, monotonous } = useDiffSettings();
-    const RenderingDecoration = viewType === 'split' ? SplitDecoration : UnifiedDecoration;
+    const { gutterType, monotonous } = useDiffSettings();
 
-    return <RenderingDecoration hideGutter={gutterType === 'none'} monotonous={monotonous} {...props} />;
+    return <UnifiedDecoration hideGutter={gutterType === 'none'} monotonous={monotonous} {...props} />;
   },
 );
 
