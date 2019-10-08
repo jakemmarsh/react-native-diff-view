@@ -20,7 +20,7 @@ declare module 'gitdiff-parser' {
     oldStart: number;
   }
 
-  interface IParseDiffResult {
+  interface IFile {
     hunks: IHunk[];
     newEndingNewLine: boolean;
     newMode: string;
@@ -34,7 +34,7 @@ declare module 'gitdiff-parser' {
   }
 
   declare const Parser: {
-    parse: (diffText: string) => IParseDiffResult[];
+    parse: (diffText: string) => IFile[];
   };
 
   export default Parser;

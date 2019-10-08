@@ -1,5 +1,5 @@
 import parser from 'gitdiff-parser';
-import { IParseDiffResult, IHunk, IChange } from '../../types';
+import { IFile, IHunk, IChange } from '../../types';
 
 export interface IMapOptions {
   nearbySequences?: string;
@@ -43,7 +43,7 @@ const mapHunk = (hunk: IHunk, options: IMapOptions): IHunk => {
   };
 };
 
-const mapFile = (file: IParseDiffResult, options: IMapOptions): IParseDiffResult => {
+const mapFile = (file: IFile, options: IMapOptions): IFile => {
   const hunks = file.hunks.map((hunk) => mapHunk(hunk, options));
 
   return { ...file, hunks };
@@ -65,7 +65,7 @@ const normalizeDiffText = (text: string): string => {
   return segments.join('\n');
 };
 
-export const parseDiff = (text: string, options: IMapOptions = {}): IParseDiffResult[] => {
+export const parseDiff = (text: string, options: IMapOptions = {}): IFile[] => {
   const diffText = normalizeDiffText(text);
   const files = parser.parse(diffText);
 
