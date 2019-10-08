@@ -1,6 +1,7 @@
 tsconfig.json
 tsconfig.test.json
 
+.jest/
 test.*
 
 hooks/
