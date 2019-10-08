@@ -1,6 +1,6 @@
 {
   "name": "react-native-diff-view",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A react-native module for parsing and displaying git diffs.",
   "main": "dist/index.js",
   "scripts": {
@@ -29,7 +29,7 @@
   "bugs": {
     "url": "https://github.com/monolist/react-native-diff-view/issues"
   },
-  "homepage": "https://github.com/monolist/react-native-diff-view#readme",
+  "homepage": "https://github.com/monolist/react-native-diff-view",
   "private": false,
   "publishConfig": {
     "access": "public"
