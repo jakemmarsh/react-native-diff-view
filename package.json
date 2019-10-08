@@ -1,6 +1,6 @@
 {
   "name": "react-native-diff-view",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A react-native module for parsing and displaying git diffs.",
   "main": "dist/index.js",
   "scripts": {
