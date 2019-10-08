@@ -1,6 +1,6 @@
 {
   "name": "react-native-diff-view",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A react-native module for parsing and displaying git diffs.",
   "main": "dist/index.js",
   "scripts": {
@@ -38,9 +38,11 @@
     "deep-equal": "^1.1.0",
     "diff-match-patch": "^1.0.4",
     "gitdiff-parser": "^0.1.2",
-    "react": "^16.10.2",
-    "react-native": "^0.61.2",
     "refractor": "^2.10.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-native": ">=0.60.4"
   },
   "devDependencies": {
     "@react-native-community/eslint-config": "0.0.5",
@@ -61,6 +63,8 @@
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.56.0",
     "prettier": "^1.18.2",
+    "react": "^16.10.2",
+    "react-native": "^0.61.2",
     "react-test-renderer": "^16.10.2",
     "shared-git-hooks": "^1.2.1",
     "ts-jest": "^24.1.0",
