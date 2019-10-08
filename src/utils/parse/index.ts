@@ -1,4 +1,5 @@
-import parser, { IParseDiffResult, IHunk, IChange } from 'gitdiff-parser';
+import parser from 'gitdiff-parser';
+import { IParseDiffResult, IHunk, IChange } from '../../types';
 
 export interface IMapOptions {
   nearbySequences?: string;

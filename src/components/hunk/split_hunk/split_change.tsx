@@ -1,7 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react';
-import { IChange } from 'gitdiff-parser';
 import { View, ViewStyle, TouchableOpacity } from 'react-native';
-import { Side, Events, IGutterOptions } from '../../../types';
+import { IChange, Side, Events, IGutterOptions } from '../../../types';
 import { INode } from '../../../tokenize/back_to_tree';
 import { composeCallback, renderDefaultBy } from '../utils';
 import cx from '../../../utils/classnames';

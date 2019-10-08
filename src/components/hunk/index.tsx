@@ -1,10 +1,9 @@
 import React from 'react';
-import { IHunk, IChange } from 'gitdiff-parser';
 import { ViewStyle } from 'react-native';
+import { IHunk, IChange, Widgets, Events } from '../../types';
 import { useDiffSettings } from '../../context';
 import UnifiedHunk from './unified_hunk';
 import SplitHunk from './split_hunk';
-import { Widgets, Events } from '../../types';
 
 export interface IHunkProps {
   hunk: IHunk;

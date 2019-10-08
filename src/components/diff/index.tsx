@@ -1,8 +1,7 @@
 import React from 'react';
 import { ViewStyle, View } from 'react-native';
-import { IHunk, IChange } from 'gitdiff-parser';
 import { INode } from '../../tokenize/back_to_tree';
-import { ViewType, GutterType, DiffType, Widgets, DiffChildren, IGutterOptions } from '../../types';
+import { IHunk, IChange, ViewType, GutterType, DiffType, Widgets, DiffChildren, IGutterOptions } from '../../types';
 import { Provider, IDiffSettings } from '../../context';
 import Hunk from '../hunk';
 

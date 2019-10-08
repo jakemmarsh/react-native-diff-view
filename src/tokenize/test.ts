@@ -1,5 +1,5 @@
 import refractor from 'refractor';
-import { IHunk } from 'gitdiff-parser';
+import { IHunk } from '../types';
 import { basicHunk, multipleHunk } from '../fixtures';
 import toTokenTrees from './to_token_trees';
 import { markEdits, markWord, tokenize, ITokenizeOptions } from '.';

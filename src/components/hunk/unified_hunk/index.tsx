@@ -1,7 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { IChange } from 'gitdiff-parser';
-import { Widgets } from '../../../types';
+import { IChange, Widgets } from '../../../types';
 import { IHunkProps } from '..';
 import { getChangeKey, computeOldLineNumber, computeNewLineNumber } from '../../../utils';
 import UnifiedChange from './unified_change';

@@ -1,4 +1,4 @@
-import { IChange } from 'gitdiff-parser';
+import { IChange } from '../../types';
 
 export const getChangeKey = (change: IChange): string => {
   if (!change) {

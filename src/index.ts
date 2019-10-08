@@ -1,5 +1,4 @@
-export { IParseDiffResult, IHunk, IChange } from 'gitdiff-parser';
-
+export * from './types';
 export * from './utils';
 export * from './tokenize';
 

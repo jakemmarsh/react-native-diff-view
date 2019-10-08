@@ -1,7 +1,6 @@
 import React from 'react';
-import { IChange } from 'gitdiff-parser';
 import { Text, TextStyle } from 'react-native';
-import { Side } from '../../types';
+import { IChange, Side } from '../../types';
 import { computeOldLineNumber, computeNewLineNumber } from '../../utils';
 
 export const renderDefaultBy = (change: IChange, side: Side): ((style: TextStyle) => JSX.Element) => (

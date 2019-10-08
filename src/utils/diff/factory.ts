@@ -1,5 +1,4 @@
-import { IChange, IHunk } from 'gitdiff-parser';
-import { Side } from '../../types';
+import { IChange, IHunk, Side } from '../../types';
 import { StartProperty, LinesProperty, first, last, sideToProperty } from './util';
 
 type ComputeLine = (change: IChange) => number;

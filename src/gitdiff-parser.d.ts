@@ -1,5 +1,5 @@
 declare module 'gitdiff-parser' {
-  export interface IChange {
+  interface IChange {
     content?: string;
     isDelete?: boolean;
     isInsert?: boolean;
@@ -10,7 +10,7 @@ declare module 'gitdiff-parser' {
     type: 'normal' | 'insert' | 'delete';
   }
 
-  export interface IHunk {
+  interface IHunk {
     changes: IChange[];
     content: string;
     isPlain: boolean;
@@ -20,7 +20,7 @@ declare module 'gitdiff-parser' {
     oldStart: number;
   }
 
-  export interface IParseDiffResult {
+  interface IParseDiffResult {
     hunks: IHunk[];
     newEndingNewLine: boolean;
     newMode: string;

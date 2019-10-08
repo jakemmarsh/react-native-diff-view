@@ -1,4 +1,4 @@
-import { IHunk } from 'gitdiff-parser';
+import { IHunk } from '../types';
 import toTokenTrees from './to_token_trees';
 import normalizeToLines from './normalize_to_lines';
 import backToTree, { INode } from './back_to_tree';

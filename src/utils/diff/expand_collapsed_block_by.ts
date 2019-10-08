@@ -1,4 +1,4 @@
-import { IHunk, IChange } from 'gitdiff-parser';
+import { IHunk, IChange } from '../../types';
 import { insertHunk, textLinesToHunk } from './insert_hunk';
 import {
   computeLineNumberFactory,

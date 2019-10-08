@@ -1,4 +1,4 @@
-import { IChange, IHunk } from 'gitdiff-parser';
+import { IChange, IHunk } from '../types';
 import { diff_match_patch as DiffMatchPatch, DIFF_EQUAL, DIFF_DELETE, DIFF_INSERT } from 'diff-match-patch';
 import pickRanges from './pick_ranges';
 import { last, flatten } from '../utils/diff/util';

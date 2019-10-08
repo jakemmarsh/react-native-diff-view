@@ -1,7 +1,6 @@
 import React from 'react';
-import { IChange } from 'gitdiff-parser';
 import { View } from 'react-native';
-import { Widgets } from '../../../types';
+import { IChange, Widgets } from '../../../types';
 import { getChangeKey, computeOldLineNumber, computeNewLineNumber } from '../../../utils';
 import SplitChange from './split_change';
 import SplitWidget from './split_widget';

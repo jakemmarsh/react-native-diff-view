@@ -1,5 +1,4 @@
-import { IHunk, IChange } from 'gitdiff-parser';
-import { Side } from '../types';
+import { IHunk, IChange, Side } from '../types';
 import { INode } from './back_to_tree';
 import { computeOldLineNumber, computeNewLineNumber } from '../utils';
 import { last } from '../utils/diff/util';

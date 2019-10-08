@@ -1,4 +1,4 @@
-import { IChange, IHunk } from 'gitdiff-parser';
+import { IChange, IHunk } from '../../types';
 import { computeLineNumberFactory } from './factory';
 import { last, findLastIndex } from './util';
 

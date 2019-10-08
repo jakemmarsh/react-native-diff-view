@@ -1,4 +1,4 @@
-import { IChange } from 'gitdiff-parser';
+import { IChange } from './types';
 import { parseDiff } from './utils';
 
 export const basic = `diff --git a/src/__test__/index.test.jsx b/src/__test__/index.test.jsx

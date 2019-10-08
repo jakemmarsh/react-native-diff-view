@@ -1,7 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { IHunk } from 'gitdiff-parser';
-import { DiffChildren, Widgets } from '../../types';
+import { IHunk, DiffChildren, Widgets } from '../../types';
 import { basicHunk } from '../../fixtures';
 import { Decoration, getChangeKey } from '../..';
 import Diff from '.';
