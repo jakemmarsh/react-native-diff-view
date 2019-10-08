@@ -21,7 +21,7 @@ export interface IHunk {
   oldStart: number;
 }
 
-export interface IParseDiffResult {
+export interface IFile {
   hunks: IHunk[];
   newEndingNewLine: boolean;
   newMode: string;
